@@ -1,0 +1,36 @@
+<aside class="main-sidebar vh-100 scroll">
+  <section class="sidebar h-100">
+    <div class="user-panel">
+      <div class="pull-left image">
+        <%= image_tag "avatar.jpeg",class: "img-circle" %>
+      </div>
+      <div class="pull-left info">
+        <%= current_user.name %>
+        <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
+      </div>
+    </div>
+    <form action="#" method="get" class="sidebar-form">
+      <div class="input-group">
+        <input type="text" name="q" class="form-control" placeholder="Search...">
+        <span class="input-group-btn">
+          <button type="submit" name="search" id="search-btn" class="btn btn-flat">
+            <i class="fa fa-search"></i>
+          </button>
+        </span>
+      </div>
+    </form>
+    <ul class="sidebar-menu" data-widget="tree">
+      <% current_user.join_rooms.each do |join| %>
+        <li>
+          <%= link_to "#" do %>
+            <img src="assets/avatar.jpeg" class="img-circle" style="width: 30px" alt="">
+            <span><%= join.room.name %></span>
+            <% if join.room.room_type == Settings.room.type.public_room %>
+              <i class="fa fa-users pull-right"></i>
+            <% end %>
+          <% end %>
+        </li>
+      <% end %>
+    </ul>
+  </section>
+</aside>

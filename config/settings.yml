@@ -1,0 +1,6 @@
+form:
+  text_area_rows: 4
+room:
+  type:
+    public_room: 0
+    private_room: 1
