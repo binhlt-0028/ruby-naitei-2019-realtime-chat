@@ -52,8 +52,7 @@ ActiveRecord::Schema.define(version: 2019_08_02_085926) do
   create_table "rooms", force: :cascade do |t|
     t.string "name"
     t.text "description"
-    t.integer "type"
-    t.datetime "new_message", null: false
+    t.integer "room_type"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

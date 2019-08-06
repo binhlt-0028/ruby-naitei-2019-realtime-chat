@@ -3,8 +3,8 @@ class CreateRooms < ActiveRecord::Migration[5.2]
     create_table :rooms do |t|
       t.string :name
       t.text :description
-      t.integer :type
-      t.datetime "new_message", null: false
+      t.integer :room_type
+
       t.timestamps
     end
   end

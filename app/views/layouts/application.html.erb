@@ -9,6 +9,7 @@
   <div>
     <% flash.each do |message_type, message| %>
       <%= hidden_field_tag "", message, class: "flash_msg #{message_type}" %>
+      <%= javascript_include_tag "toastr_flash.js" %>
     <% end %>
     <%= yield %>
   </div>
