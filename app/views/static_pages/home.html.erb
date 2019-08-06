@@ -1,0 +1,20 @@
+<div class="hold-transition skin-blue sidebar-mini">
+  <div class="wrapper">
+    <%= render "layouts/header" %>
+
+    <%= render "layouts/sidebar" %>
+
+    <div class="content-wrapper">
+      <div class="content">
+        <div class="row vh-87">
+          <div class="col-md-8 h-100">
+            <%= render "rooms/chatting" %>
+          </div>
+          <div class="col-md-4 h-100 scroll">
+            <%= render "rooms/room_info" %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
